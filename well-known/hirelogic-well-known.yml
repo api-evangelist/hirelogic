@@ -1,0 +1,95 @@
+generated: '2026-08-22'
+method: probed
+source: live probes of every HireLogic host (hirelogic.com, api.hirelogic.com, app.hirelogic.com)
+summary: >-
+  No /.well-known document is served by HireLogic on any host. The marketing site returns a real
+  nginx 404 for every path, the API Gateway host rejects all anonymous requests with 403, and the
+  application host is an S3/CloudFront single-page app that answers 200 with the SAME 20344-byte
+  HTML shell for every path — including a random control path — so none of its 200s is a document.
+hit_count: 0
+hosts:
+- host: https://hirelogic.com
+  note: WordPress marketing site; genuine nginx 404 body (548 bytes) on every /.well-known path.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://api.hirelogic.com
+  note: >-
+    AWS API Gateway. Every path returns HTTP 403 {"message":"Forbidden"} with
+    x-amzn-errortype: ForbiddenException. Anonymous discovery is not possible on this host.
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+  - path: /.well-known/openid-configuration
+    status: 403
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+  - path: /.well-known/oauth-protected-resource
+    status: 403
+  - path: /.well-known/api-catalog
+    status: 403
+  - path: /.well-known/ai-plugin.json
+    status: 403
+  - path: /.well-known/agent-card.json
+    status: 403
+  - path: /.well-known/agent.json
+    status: 403
+- host: https://app.hirelogic.com
+  note: >-
+    Angular SPA on S3/CloudFront. CATCH-ALL: every path returns 200 with an identical
+    20344-byte HTML shell. These are NOT documents and were not saved.
+  soft_404_control:
+    path: /zzz-nonexistent-control-8891
+    status: 200
+    bytes: 20344
+    conclusion: >-
+      Control path returns byte-identical response to every /.well-known probe, proving the
+      host is a catch-all and no /.well-known document exists.
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    bytes: 20344
+    is_document: false
+    reason: spa-catch-all-html
+  - path: /.well-known/openid-configuration
+    status: 200
+    bytes: 20344
+    is_document: false
+    reason: spa-catch-all-html
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    bytes: 20344
+    is_document: false
+    reason: spa-catch-all-html
+  - path: /.well-known/api-catalog
+    status: 200
+    bytes: 20344
+    is_document: false
+    reason: spa-catch-all-html
+  - path: /.well-known/agent-card.json
+    status: 200
+    bytes: 20344
+    is_document: false
+    reason: spa-catch-all-html
+  - path: /.well-known/agent.json
+    status: 200
+    bytes: 20344
+    is_document: false
+    reason: spa-catch-all-html
+pointer_policy: >-
+  No WellKnown and no SecurityTxt pointer is emitted in apis.yml: nothing was served. This file
+  records a measured absence, which must not be scored as a presence.

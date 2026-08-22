@@ -1,0 +1,58 @@
+generated: '2026-08-22'
+method: searched
+source: https://hirelogic.com/info/privacy/
+note: >-
+  HireLogic publishes no machine-readable contract, so nothing here is derived from a spec.
+  Every entry below is read from the company's own published privacy policy, which is the only
+  page on the site carrying compliance claims.
+standards:
+- id: gdpr
+  name: EU General Data Protection Regulation
+  conforms: true
+  evidence: >-
+    Privacy policy at https://hirelogic.com/info/privacy/ carries a GDPR badge image
+    (wp-content/uploads/GDPR_logo-1080x1080.png) AND substantive prose citing the regime by
+    article - "standard contractual clauses or an alternative mechanism for the transfer of data
+    as approved by the European Commission (Art. 46 GDPR)" and a reference to an EU finding of
+    adequacy under Article 45. Named data-subject contact: privacy@hirelogic.com.
+  strength: prose-and-badge
+- id: soc2
+  name: SOC 2
+  conforms: true
+  claimed_only: true
+  evidence: >-
+    Privacy policy displays a SOC badge image (wp-content/uploads/SOC_logo.png). This is a
+    BADGE ONLY - the page names no auditor, no report type (Type I vs Type II), no audit date,
+    no scope, and HireLogic publishes no trust center or report-request flow. Recorded as a
+    published claim, not as a verified certification.
+  strength: badge-only
+- id: aedt-bias-audit
+  name: NYC Local Law 144 / automated employment decision tool bias audit
+  conforms: false
+  evidence: >-
+    Checked because HireLogic sells AI-assisted screening and ranking into US hiring, which is
+    the regime's target. No bias-audit summary, AEDT notice, or Local Law 144 disclosure was
+    found on hirelogic.com (no /security, /trust, /compliance page exists; sitemap enumerated
+    33 pages, none of them a compliance disclosure).
+  strength: not-found
+- id: oauth2
+  name: OAuth 2.0
+  conforms: false
+  evidence: >-
+    No public authorization server. /.well-known/oauth-authorization-server and
+    /.well-known/openid-configuration return 404 on hirelogic.com and 403 on api.hirelogic.com.
+  strength: not-found
+- id: rfc9457
+  name: RFC 9457 Problem Details for HTTP APIs
+  conforms: false
+  evidence: No published contract or error reference to evaluate.
+  strength: not-applicable
+domain_standard:
+  evaluated: true
+  found: false
+  note: >-
+    The HR/recruiting market does have machine-readable domain standards (HR Open Standards,
+    schema.org/JobPosting, HROpen JSON, and the ATS object model exposed via unified-API
+    vendors). HireLogic declares none of them in a contract because it publishes no contract.
+    It CONSUMES the Merge unified ATS object model as a client rather than exposing one.
+    Reward-only dimension: recorded as absent, not penalised.

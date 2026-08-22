@@ -64,5 +64,21 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-HireLogic is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+HireLogic, Inc. is a US (Great Falls, Virginia) HR-technology company building an AI interview
+intelligence platform for staffing, recruiting and in-house talent teams. Its AI joins video, phone
+and in-person interviews to produce automated interview notes, transcripts, structured candidate
+summaries and recruiting analytics.
+
+**HireLogic publishes no public API.** There is no developer portal, API reference, OpenAPI or other
+machine-readable contract, no SDK on any package registry, and no GitHub organization. The product is
+sold and delivered as an end-user SaaS application, and its applicant-tracking-system connectivity is
+consumed from the Merge unified API rather than exposed as one.
+
+> **Name collision.** Two unrelated companies trade as "HireLogic". This profile is
+> **HireLogic, Inc.** (hirelogic.com), the US interview-intelligence company. **HireLogic Ltd.**
+> (hirelogic.app) is a separate UK equipment-hire/rental software company that does advertise an open
+> API — that API belongs to them and is not profiled here.
+
+- https://hirelogic.com/
+- https://support.hirelogic.com/
+- https://app.hirelogic.com/signup

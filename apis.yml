@@ -1,17 +1,34 @@
 aid: hirelogic
 name: HireLogic
-description: 'HireLogic is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'HireLogic, Inc. is a US (Great Falls, Virginia) HR-technology company building an AI interview
+  intelligence platform for staffing, recruiting and in-house talent teams. Its AI joins video, phone
+  and in-person interviews to produce automated interview notes, transcripts, structured candidate summaries,
+  topic highlights and hiring-signal analytics, so recruiters stop hand-writing notes and hiring managers
+  can compare candidates on evidence rather than recall. The product surface includes instant interview
+  insights, an interview chatbot for querying past interviews, intake-call insights, smart resume analysis
+  and ranking, automated AI interviews, recruiting-team analytics, and a mobile companion app for in-person
+  interviews. It integrates with Zoom, Microsoft Teams and Google Meet, and connects to applicant tracking
+  systems through the Merge unified API as a consumer of that service. HireLogic raised a $4M seed round
+  in 2022. It is delivered strictly as an end-user SaaS product: as of this profile the company publishes
+  no public API, developer portal, SDK, or machine-readable contract.'
+image: https://hirelogic.com/wp-content/uploads/Hirelogic_icon.png
 url: https://raw.githubusercontent.com/api-evangelist/hirelogic/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-22'
 modified: '2026-08-22'
 tags:
 - Company
+- Human Resources
+- HR Tech
+- Recruiting
+- Talent Acquisition
+- Interview Intelligence
+- Artificial Intelligence
+- Transcription
+- Staffing
+- Conversation Intelligence
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +36,61 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/hirelogic-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://hirelogic.com/
+- type: Blog
+  url: https://hirelogic.com/insights/
+- type: BlogRSS
+  url: https://hirelogic.com/feed/
+- type: SignUp
+  url: https://app.hirelogic.com/signup
+- type: Login
+  url: https://app.hirelogic.com/signin
+- type: TermsOfService
+  url: https://hirelogic.com/info/terms/
+- type: PrivacyPolicy
+  url: https://hirelogic.com/info/privacy/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/hirelogic-co/
+- type: Twitter
+  url: https://twitter.com/hirelogicnow
+- type: Support
+  url: https://support.hirelogic.com/
+- type: HelpCenter
+  url: https://support.hirelogic.com/
+- type: Compliance
+  url: conformance/hirelogic-conformance.yml
+- type: Conformance
+  url: conformance/hirelogic-conformance.yml
+- type: LLMsTxt
+  url: llms/hirelogic-llms.txt
+- type: Plans
+  url: plans/hirelogic-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/hirelogic-rate-limits.yml
+x-enrichment:
+  date: '2026-08-22'
+  status: minimal
+  artifacts_added: 7
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: 'HireLogic, Inc. sells AI interview intelligence purely as an end-user SaaS app: /developers,
+    /api and /docs all 404 on hirelogic.com, its only API host api.hirelogic.com is a private AWS API
+    Gateway that 403s every anonymous request, and its ATS connectivity is consumed from the Merge unified
+    API rather than exposed as one.'
+  evidence:
+  - url: https://hirelogic.com/developers
+    status: 404
+  - url: https://hirelogic.com/api
+    status: 404
+  - url: https://api.hirelogic.com/openapi.json
+    status: 403
+  - url: https://hirelogic.com/llms.txt
+    status: 404
+  - url: https://support.hirelogic.com/integrations
+    status: 200
+  checked: '2026-08-22'

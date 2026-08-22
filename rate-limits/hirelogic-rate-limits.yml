@@ -1,0 +1,17 @@
+generated: '2026-08-22'
+method: searched
+source: https://hirelogic.com/
+limit_count: 0
+note: >-
+  No rate limits are published, because HireLogic publishes no public API. There is no developer
+  portal, no API reference and no docs host to state limits. The only HireLogic API host,
+  api.hirelogic.com, is an AWS API Gateway that returns 403 ForbiddenException to every anonymous
+  request, so no rate-limit response headers (X-RateLimit-*, RateLimit-*, Retry-After) can be
+  observed either. Recorded as an honest zero, not an omission.
+rate_limits: []
+headers_observed: []
+evidence:
+- url: https://api.hirelogic.com/
+  status: 403
+- url: https://hirelogic.com/developers
+  status: 404

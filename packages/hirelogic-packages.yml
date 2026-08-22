@@ -1,0 +1,22 @@
+generated: '2026-08-22'
+method: searched
+source: npm, PyPI, RubyGems, crates.io and GitHub registry/API searches
+package_count: 0
+note: >-
+  No first-party HireLogic client library exists on any public registry. Searched npm
+  (registry.npmjs.org search "hirelogic" - 0 results), PyPI (pypi.org/pypi/hirelogic/json - 404
+  Not Found), RubyGems (404 "could not be found"), and crates.io (0 crates). There is no
+  HireLogic GitHub organization (api.github.com/orgs/hirelogic - 404); the 28 GitHub repositories
+  matching the name are unrelated personal projects by third parties, not company-published SDKs.
+  Consistent with the company publishing no API at all. No SDKs pointer is emitted.
+packages: []
+evidence:
+- url: https://registry.npmjs.org/-/v1/search?text=hirelogic
+  status: 200
+  result: 0 packages
+- url: https://pypi.org/pypi/hirelogic/json
+  status: 404
+- url: https://rubygems.org/api/v1/gems/hirelogic.json
+  status: 404
+- url: https://api.github.com/orgs/hirelogic
+  status: 404

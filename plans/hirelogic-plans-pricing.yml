@@ -1,0 +1,19 @@
+generated: '2026-08-22'
+method: searched
+source: https://hirelogic.com/
+plan_count: 0
+note: >-
+  HireLogic publishes NO pricing page. /pricing, /pricing/ and /plans all return HTTP 404, and
+  the company's own page sitemap (33 pages) contains no pricing, plans or packaging page. The
+  site's only commercial calls to action are a signup at app.hirelogic.com/signup, a demo request
+  popup, and mailto:sales@hirelogic.com - i.e. pricing is a sales conversation. Public reporting
+  notes plans that bundle ATS integration, but the company states no tier names, prices, currency,
+  billing period, quotas or overages anywhere public, so no tier is recorded here.
+plans: []
+evidence:
+- url: https://hirelogic.com/pricing
+  status: 404
+- url: https://hirelogic.com/plans
+  status: 404
+- url: https://app.hirelogic.com/signup
+  status: 200
