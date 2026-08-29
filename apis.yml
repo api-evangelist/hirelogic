@@ -11,6 +11,17 @@ description: 'HireLogic, Inc. is a US (Great Falls, Virginia) HR-technology comp
   systems through the Merge unified API as a consumer of that service. HireLogic raised a $4M seed round
   in 2022. It is delivered strictly as an end-user SaaS product: as of this profile the company publishes
   no public API, developer portal, SDK, or machine-readable contract.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://hirelogic.com/wp-content/uploads/Hirelogic_icon.png
 url: https://raw.githubusercontent.com/api-evangelist/hirelogic/refs/heads/main/apis.yml
 x-type: company
